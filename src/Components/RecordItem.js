@@ -7,6 +7,7 @@ class RecordItem extends Component {
         const {event} = this.props;
 
         return (
+
             <Segment.Group>
                 <Segment>
                     <Item.Group>
@@ -35,6 +36,8 @@ class RecordItem extends Component {
                     <Button as="a" color="teal" floated="right" content="View"/>
                 </Segment>
             </Segment.Group>
+
+
         )
     }
 }

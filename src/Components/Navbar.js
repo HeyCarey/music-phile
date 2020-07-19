@@ -7,20 +7,14 @@ class NavBar extends Component {
         return (
       <Menu inverted fixed="top">
         <Container>
-          <Menu.Item header>
-          <Link to="/">
+          <Menu.Item header as={Link} to="/">
           <img src="/assets/logo.png" alt="logo" />
           Audio-Phile
-          </Link>
           </Menu.Item>
 
-          <Link to='/input'>
-          <Menu.Item name="Create a Record" />
-          </Link>
+          <Menu.Item name="Create a Record" as={Link} to='/input' />
 
-          <Link to='/records'>
-          <Menu.Item name="Catalog" />
-          </Link>
+          <Menu.Item name="Catalog" as={Link} to='/records' />
 
           <Menu.Item position="right">
             <Button basic inverted content="Login" />

@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Segment, Form, Button} from 'semantic-ui-react';
+import {Segment, Form, Button, Grid} from 'semantic-ui-react';
 
 class EventForm extends Component {
     state = {
@@ -26,6 +26,8 @@ class EventForm extends Component {
         const {title, date, city, venue, hostedBy} = this.state;
 
         return (
+            <Grid textAlign='left' style={{ padding: '2em 0em' }}>
+            <Grid.Column style={{ maxWidth: 1200 }}>
             <Segment>
                 <Form onSubmit={this.handleFormSubmit}>
                     <Form.Field>
@@ -75,6 +77,8 @@ class EventForm extends Component {
                     <Button onClick={cancelFormOpen} type="button">Cancel</Button>
                 </Form>
             </Segment>
+            </Grid.Column>
+            </Grid>
         )
     }
 }
