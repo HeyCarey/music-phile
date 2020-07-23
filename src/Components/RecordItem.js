@@ -18,6 +18,12 @@ class RecordItem extends Component {
                                 <Item.Description>
                                     {`Created by ${event.musician}`}
                                 </Item.Description>
+                                <Item.Description>
+                                    {`Equipment used to record: ${event.equipment}`}
+                                </Item.Description>
+                                <Item.Description>
+                                    {`Digital File: ${event.file}`}
+                                </Item.Description>
                             </Item.Content>
                         </Item>
                     </Item.Group>
@@ -25,14 +31,14 @@ class RecordItem extends Component {
                 <Segment>
                     <span>
                         <Icon name="clock"/>
-                        {event.date} |
+                        {`Recorded on: ${event.date}`} |
                         <Icon name="marker"/>
-                        {event.venue}
+                        {`Recorded at: ${event.location}`}
                     </span>
                 </Segment>
                 
                 <Segment clearing>
-                <span>{event.description}</span>
+                <span>{`Description: ${event.description}`}</span>
                     <Button as="a" color="teal" floated="right" content="View"/>
                 </Segment>
             </Segment.Group>
