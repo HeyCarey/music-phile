@@ -36,8 +36,26 @@ class Input extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.handleCatalog();
-    }
+        const {
+        title,
+        date,
+        location,
+        description,
+        equipment,
+        file,
+        musician,
+        } = this.state;
+        const newRecord = {
+        title,
+        date,
+        location,
+        description,
+        equipment,
+        file,
+        musician,
+        };
+        this.handleCatalog(newRecord);
+        };
 
     render() {
         const {
